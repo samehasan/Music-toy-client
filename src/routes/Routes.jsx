@@ -12,6 +12,7 @@ import MainLayout from "../layouts/Main/MainLayout";
 import Home from "../pages/Home/Home";
 import AddToy from "../pages/AddToy/AddToy";
 import MyToys from "../pages/MyToys/MyToys";
+import Blog from "../../src/pages/Blog/Blog"
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/MyToys",
         element: <MyToys></MyToys>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
       {
         path: "services/:id",

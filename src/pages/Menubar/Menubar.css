@@ -4,6 +4,7 @@
     padding: 10px;
     background-color: #3870a8;
     color:white !important;
+
 }
 .menu-container{
     display: flex;
@@ -18,8 +19,12 @@
     list-style: none;
     
 }
-.logo{
+.logo {
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
     width: 60px;
+    
 }
 .menu-item{
     text-decoration: none !important;

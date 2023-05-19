@@ -22,7 +22,7 @@ const Toy = ({ toy }) => {
         <div className="col-md-4">
           <img
             className="w-100"
-            src="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src={image}
             alt=""
           />
         </div>

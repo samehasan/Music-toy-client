@@ -18,11 +18,13 @@ const Menubar = () => {
   return (
     <div className="Menubar-container">
       <div className="logo">
+        <h3>Musical</h3>
         <img
           className="logo"
           src="https://cdn-icons-png.flaticon.com/512/4017/4017755.png"
           alt=""
         />
+        <h3>Toy</h3>
       </div>
       <div className="menu-container">
         <Link className="menu-item" to="/">
@@ -30,6 +32,9 @@ const Menubar = () => {
         </Link>
         <Link className="menu-item" to="/MyToys">
           <li>My Toys</li>
+        </Link>
+        <Link className="menu-item" to="/blog">
+          <li>Blog</li>
         </Link>
         <Link className="menu-item" to="/addToy">
           <li>Add Toys</li>

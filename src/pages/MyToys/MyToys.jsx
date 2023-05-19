@@ -17,6 +17,8 @@ const MyToys = () => {
   const [searchText, setSearchText] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
   const [control, setControl] = useState(false);
+  const [selectedToy, setSelectedToy] = useState(null);
+
   useEffect(() => {
     fetch(`http://localhost:5000/myToys/${user?.email}`)
       .then((res) => res.json())
@@ -25,6 +27,7 @@ const MyToys = () => {
         setToys(data);
       });
   }, [user, control]);
+
   const handleSearch = () => {
     fetch(`http://localhost:5000/getToysByText/${searchText}`)
       .then((res) => res.json())
@@ -50,6 +53,24 @@ const MyToys = () => {
       });
   };
 
+  const handleDeleteToy = (toyId) => {
+    fetch(`http://localhost:5000/deleteToy/${toyId}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.message === "Toy deleted successfully") {
+          // Toy deleted successfully, update the list
+          setToys((prevToys) =>
+            prevToys.filter((toy) => toy._id !== toyId)
+          );
+        }
+      })
+      .catch((error) => {
+        console.log("Error deleting toy:", error);
+      });
+  };
+
   return (
     <div>
       <div className="my-Toys-container">
@@ -67,7 +88,8 @@ const MyToys = () => {
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Seller</th>
+              {/* <th>Seller</th> */}
+              <th>Description</th>
               <th>Rating</th>
               <th>Price</th>
               <th>Edit</th>
@@ -76,10 +98,11 @@ const MyToys = () => {
           </thead>
           <tbody>
             {Toys?.map((Toy, index) => (
-              <tr>
+              <tr key={Toy._id}>
                 <td>{index + 1}</td>
                 <td>{Toy.title}</td>
-                <td>{Toy.category}</td>
+                {/* <td>{Toy.seller}</td> */}
+                <td>{Toy.description}</td>
                 <td>{Toy.rating}</td>
                 <td>{Toy.price}</td>
                 <td>
@@ -94,8 +117,9 @@ const MyToys = () => {
                   />
                 </td>
                 <td>
-                  {" "}
-                  <button>Delete</button>
+                  <button onClick={() => handleDeleteToy(Toy._id)}>
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

@@ -31,7 +31,7 @@ const Toys = () => {
             <div
               onClick={() => handleTabClick("Piano")}
               className={`tab  tab2 Piano ${
-                activeTab == "Piano" ? " bg-danger text-white" : ""
+                activeTab == "Piano" ? " bg-warning text-dark" : ""
               }`}
             >
               Piano
@@ -39,7 +39,7 @@ const Toys = () => {
             <div
               onClick={() => handleTabClick("Guitar")}
               className={`tab  tab2 Guitar ${
-                activeTab == "Guitar" ? " bg-danger text-white" : ""
+                activeTab == "Guitar" ? " bg-success text-white" : ""
               }`}
             >
               Guitar
@@ -47,7 +47,7 @@ const Toys = () => {
             <div
               onClick={() => handleTabClick("Drums")}
               className={`tab  tab2 Drums ${
-                activeTab == "Drums" ? " bg-danger text-white" : ""
+                activeTab == "Drums" ? " bg-primary text-white" : ""
               }`}
             >
               Drums

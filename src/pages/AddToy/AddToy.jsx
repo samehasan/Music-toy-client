@@ -28,48 +28,34 @@ const AddToy = () => {
       });
     console.log(data);
   };
-  const options = [
-    { value: "JavaScript", label: "JavaScript" },
-    { value: "C++", label: "C++" },
-    { value: "HTML", label: "HTML" },
-    { value: "CSS", label: "CSS" },
-    { value: "React", label: "React" },
-    { value: "Node", label: "Node" },
-    { value: "MongoDB", label: "MongoDB" },
-    { value: "Redux", label: "Redux" },
-  ];
+ 
 //   console.log(user);
   return (
-    <div className="add-Toy-container">
-      <div className="add-Toy row">
+    <div className="add-Toy-container flex justify-center">
+     
         <div className="col-md-8">
           <form onSubmit={handleSubmit(onSubmit)}>
             {errors.exampleRequired && <span>This field is required</span>}
             <input
               className="text-input"
               {...register("title")}
-              placeholder="title"
-              defaultValue="Web developer"
+              placeholder="Toy Name"
+             
             />
 
             <input
               className="text-input"
               {...register("price", { required: true })}
               placeholder="price"
-              defaultValue="30k"
+              
             />
             <input
               className="text-input"
               {...register("rating", { required: true })}
               placeholder="rating"
-              type="number"
+             
             />
-            <select className="text-input" {...register("seller")}>
-              <option value="Engineering">engineering</option>
-              <option value="Editor">Editor</option>
-              <option value="writer">Writer</option>
-              <option value="Developer">Developer</option>
-            </select>
+          
             <select className="text-input" {...register("status")}>
               <option value="Piano">Piano</option>
               <option value="Guitar">Guitar</option>
@@ -80,14 +66,9 @@ const AddToy = () => {
               {...register("image")}
               placeholder="image link"
               type="url"
-              defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+              defaultValue="https://easydrawingguides.com/wp-content/uploads/2020/08/how-to-draw-a-piano-featured-image-1200-940x1024.png"
             />
-            <input
-              className="text-input"
-              {...register("deadline")}
-              placeholder="deadline"
-              type="date"
-            />
+           
             <input
               className="text-input"
               value={user?.email}
@@ -95,29 +76,17 @@ const AddToy = () => {
               placeholder="your email"
               type="email"
             />
-            <CreatableSelect
-              className="w-75"
-              defaultValue={selectedOption}
-              onChange={setSelectedOption}
-              options={options}
-              isMulti
-            />
+           
             <input
               className="text-input"
               {...register("description")}
               placeholder="description"
             />
-            <input className="submit-btn" value="Post Toy" type="submit" />
+            <input className="submit-btn" value="Add Toy" type="submit" />
           </form>
         </div>
-        <div className="col-md-4">
-          <img
-            className="w-100"
-            src="https://i.ibb.co/rthZ75K/pngtree-Toy-rating-with-join-our-team-recruitment-vector-design-png-image-6419066-removebg-preview.png"
-            alt=""
-          />
-        </div>
-      </div>
+       
+      
     </div>
   );
 };

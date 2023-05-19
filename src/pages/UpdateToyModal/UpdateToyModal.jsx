@@ -41,7 +41,7 @@ const UpdateToyModal = (props) => {
             className="text-input"
             {...register("title")}
             placeholder="Name"
-            defaultValue={props?.Toy?.title}
+         
           />
           <input
             className="text-input d-none"
@@ -53,12 +53,13 @@ const UpdateToyModal = (props) => {
             className="text-input"
             {...register("price", { required: true })}
             placeholder="price"
-            defaultValue={props?.Toy?.price}
+           
           />
            <input
               className="text-input"
               {...register("description")}
               placeholder="description"
+            
             />
              <input
               className="text-input"
@@ -69,7 +70,7 @@ const UpdateToyModal = (props) => {
             className="text-input"
             {...register("rating", { required: true })}
             placeholder="rating"
-            defaultValue={props?.Toy?.rating}
+         
           />
         
       
@@ -78,7 +79,7 @@ const UpdateToyModal = (props) => {
             {...register("image")}
             placeholder="image link"
             type="url"
-            defaultValue={props?.Toy?.image}
+         
           />
           
           <input className="submit-btn" value="Update Toy" type="submit" />

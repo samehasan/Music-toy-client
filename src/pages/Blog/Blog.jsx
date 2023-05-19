@@ -1,21 +1,17 @@
-import React, { useRef } from 'react';
+import  { useRef } from 'react';
 import './Blog.css';
-import { PDFExport } from '@progress/kendo-react-pdf';
+
 
 const Blog = () => {
-  const pdfRef = useRef(null);
-
-  const handleDownload = () => {
-    pdfRef.current.save();
-  };
+  
 
   return (
     <div className="blog-container">
       <div className="blog-header">
         <h1>Q&A</h1>
-        <button onClick={handleDownload}>Download PDF</button>
+      
       </div>
-      <PDFExport ref={pdfRef}>
+    
         <div className="blog-content">
           <div className="blog-item">
             <h2>Question 1: Differences between uncontrolled and controlled components</h2>
@@ -42,7 +38,7 @@ const Blog = () => {
             </p>
           </div>
         </div>
-      </PDFExport>
+     
     </div>
   );
 };
