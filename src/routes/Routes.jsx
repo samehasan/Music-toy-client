@@ -14,6 +14,7 @@ import AddToy from "../pages/AddToy/AddToy";
 import MyToys from "../pages/MyToys/MyToys";
 import Blog from "../../src/pages/Blog/Blog"
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>,
       },
+     
       {
         path: "services/:id",
         element: (
