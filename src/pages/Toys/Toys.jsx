@@ -9,7 +9,7 @@ import Toy from "../Toy/Toy";
 const Toys = () => {
  
   const [Toys, setToy] = useState([]);
-  const [activeTab, setActiveTab] = useState("ahghf");
+  const [activeTab, setActiveTab] = useState("n");
 
   useEffect(() => {
     fetch(`http://localhost:5000/allToysByCategory/${activeTab}`)
@@ -24,7 +24,7 @@ const Toys = () => {
   };
   return (
     <div>
-      <h1 className="title text-center mt-5 p-5">Shop By Category</h1>
+      <h1 className="text-center fw-bold mt-5 p-5">Shop By Category</h1>
       <div className="tab-container text-center">
         <div className="text-center w-100 m-auto">
           <div className="tabs d-flex justify-content-center align-items-center">
@@ -34,7 +34,7 @@ const Toys = () => {
                 activeTab == "Piano" ? " bg-warning text-dark" : ""
               }`}
             >
-              Piano
+               <h2>Piano</h2>
             </div>
             <div
               onClick={() => handleTabClick("Guitar")}
@@ -42,7 +42,7 @@ const Toys = () => {
                 activeTab == "Guitar" ? " bg-success text-white" : ""
               }`}
             >
-              Guitar
+              <h2>Guitar</h2>
             </div>
             <div
               onClick={() => handleTabClick("Drums")}
@@ -50,7 +50,7 @@ const Toys = () => {
                 activeTab == "Drums" ? " bg-primary text-white" : ""
               }`}
             >
-              Drums
+             <h2>Drums</h2>
             </div>
           </div>
         </div>

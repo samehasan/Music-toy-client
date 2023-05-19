@@ -1,3 +1,4 @@
+
 .single-card{
     /* border: 1px solid red; */
     
@@ -17,7 +18,7 @@
 }
 .tab{
     padding: 13px 40px;
-    background-color: #fff;
+    background-color: #85f4d2;
     cursor: pointer;
 }
 .tab1{

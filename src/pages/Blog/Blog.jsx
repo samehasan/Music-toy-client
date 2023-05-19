@@ -1,7 +1,4 @@
-import  { useRef } from 'react';
-import './Blog.css';
-
-
+import './Blog.css'
 const Blog = () => {
   
 
