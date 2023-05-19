@@ -1,0 +1,28 @@
+.card{
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: rgb(97, 184, 222);
+}
+.seller-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.main-seller-container{
+    background-color: rgb(198, 240, 231);
+
+}
+.seller-title{
+    color: rgb(36, 10, 10);
+    font-size:45px;
+    font-weight: bold;
+
+}
