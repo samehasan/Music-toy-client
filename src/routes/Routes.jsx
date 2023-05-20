@@ -2,24 +2,27 @@
 // eslint-disable-next-line no-unused-vars
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import LoginLayout from "../layouts/LoginLayout/LoginLayout";
-import ServicesLayout from "../layouts/ServicesLayout/ServicesLayout";
+
 import Login from "../pages/Login/Login";
-import Services from "../pages/Services/Services";
-import ServiceDetails from "./../pages/ServiceDetails/ServiceDetails";
+import Toygalarys from "../pages/Toygalarys/Toygalarys";
+import ToygalaryDetails from "../pages/ToygalaryDetails/ToygalaryDetails";
 import Register from "./../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import MainLayout from "../layouts/Main/MainLayout";
 import Home from "../pages/Home/Home";
 import AddToy from "../pages/AddToy/AddToy";
 import MyToys from "../pages/MyToys/MyToys";
-import Blog from "../../src/pages/Blog/Blog"
-
+import Blog from "../../src/pages/Blog/Blog";
+import NotFound from "../pages/Notfound/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
     children: [
+      {path:"*",
+      element:<NotFound></NotFound>,
+    },
       {
         path: "/",
         element: <Home></Home>,
@@ -29,8 +32,8 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "services",
-        element: <Services></Services>,
+        path: "toygalarys",
+        element: <Toygalarys></Toygalarys>,
       },
       {
         path: "/addToy",
@@ -46,10 +49,10 @@ const router = createBrowserRouter([
       },
      
       {
-        path: "services/:id",
+        path: "toygalarys/:id",
         element: (
           <PrivateRoute>
-            <ServiceDetails></ServiceDetails>
+            <ToygalaryDetails></ToygalaryDetails>
           </PrivateRoute>
         ),
       },

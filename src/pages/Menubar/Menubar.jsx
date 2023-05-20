@@ -26,10 +26,15 @@ const Menubar = () => {
         />
         <h3>Toy</h3>
       </div>
-      <div className="menu-container">
+      <div className="menu-container fw-bold ">
         <Link className="menu-item" to="/">
           <li>Home</li>
         </Link>
+
+        <Link className="menu-item" to="toygalarys">
+          <li>Toy Gallery</li>
+        </Link>
+
         <Link className="menu-item" to="/MyToys">
           <li>My Toys</li>
         </Link>
