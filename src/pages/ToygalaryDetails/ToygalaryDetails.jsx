@@ -5,16 +5,18 @@ const ToygalaryDetails = ({ toy }) => {
 
       {/* id: 8,
         seller: "Olivia Moore",
-        toyName: "Tambourine",
+        toytitle: "Tambourine",
         subCategory: "Percussion Instruments",
         price: 12,
         availableQuantity: 9,
         image: "tambourine.jpg", */}
 
-      <h2>{toy.toyName}</h2>
-      <img src={toy.image}  />
+      <h2>{toy.title}</h2>
+      <div classtitle="col-md-4">
+          <img classtitle="w-100" src={toy.image} alt="" />
+        </div>
       <p>{toy.subCategory}</p>
-      <p>Description: {toy.seller}</p>
+      <p>seller: {toy.seller}</p>
       <p>Price: {toy.price}</p>
       <p>Available Quantity :{toy.availableQuantity}</p>
       {/* Add more details here as needed */}

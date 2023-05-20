@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Toys from "../Toys/Toys";
+import Fivetips from "../fivetips/Fivetips";
 
 const Home = () => {
   const [servicesData, setServicesData] = useState([]);
@@ -10,11 +11,10 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div>
-        hi
-      </div>
+     
       <Category></Category>
       <Toys></Toys>
+      <Fivetips></Fivetips>
     </div>
   );
 };

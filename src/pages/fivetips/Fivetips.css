@@ -1,4 +1,4 @@
-.card{
+.bcrd{
     width: 250px;
     height: 200px;
     padding: 10px;
@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     margin: 10px;
-    background-color: rgb(97, 184, 222);
+    background-color: rgb(157, 224, 238);
 }
 .seller-container{
     width: 80%;
@@ -16,8 +16,8 @@
     justify-content: space-around;
     align-items:center;
 }
-.main-seller-container{
-    background-color: rgb(229, 254, 249);
+.msc{
+    background-color: rgb(246, 241, 239);
 
 }
 .seller-title{

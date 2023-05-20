@@ -9,7 +9,7 @@ import Toy from "../Toy/Toy";
 const Toys = () => {
  
   const [Toys, setToy] = useState([]);
-  const [activeTab, setActiveTab] = useState("n");
+  const [activeTab, setActiveTab] = useState("");
 
   useEffect(() => {
     fetch(`http://localhost:5000/allToysByCategory/${activeTab}`)

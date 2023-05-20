@@ -1,41 +1,42 @@
-import './Blog.css'
-const Blog = () => {
-  
+import React from 'react';
+import './Blog.css';
 
+const Blog = () => {
   return (
     <div className="blog-container">
       <div className="blog-header">
         <h1>Q&A</h1>
-      
       </div>
-    
-        <div className="blog-content">
-          <div className="blog-item">
-            <h2>Question 1: Differences between uncontrolled and controlled components</h2>
-            <p>
-              Uncontrolled components manage their own state internally, while controlled components have their state managed by React. With uncontrolled components, React does not keep track of the component's value, while with controlled components, the component's value is stored in state and updated via a change handler.
-            </p>
-          </div>
-          <div className="blog-item">
-            <h2>Question 2: How to validate React props using PropTypes</h2>
-            <p>
-              You can use the PropTypes library to specify the type and shape of props that a component expects. To require that a prop be a specific type, you can use the PropTypes module.
-            </p>
-          </div>
-          <div className="blog-item">
-            <h2>Question 3: Difference between Node.js and Express.js</h2>
-            <p>
-              Node.js is a runtime environment for executing JavaScript outside of a web browser, while Express.js is a web application framework built on top of Node.js. Node.js provides a way to execute JavaScript on the server side, while Express.js provides a set of tools and conventions for building web applications on top of Node.js.
-            </p>
-          </div>
-          <div className="blog-item">
-            <h2>Question 4: What is a custom hook, and why will you create a custom hook?</h2>
-            <p>
-              A custom hook is a JavaScript function that uses React's built-in hooks to encapsulate some specific behavior that can be reused across multiple components. Custom hooks can simplify complex logic, make it more reusable and easier to test. We create custom hooks to extract and share logic between components without having to rely on higher-order components, render props, or other patterns.
-            </p>
-          </div>
+
+      <div className="blog-content">
+        <div className="blog-item">
+          <h2>Question 1: What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
+          <p>
+            An access token is a credential used to authenticate and authorize a user. It is typically short-lived and grants access to protected resources. A refresh token is a long-lived credential used to obtain new access tokens once the original access token expires. Access tokens are usually stored in browser memory or cookies, while refresh tokens should be securely stored on the server-side.
+          </p>
         </div>
-     
+
+        <div className="blog-item">
+          <h2>Question 2: Compare SQL and NoSQL databases?</h2>
+          <p>
+            SQL databases are relational databases that use structured query language (SQL) to define and manipulate data. They have predefined schemas and are suitable for structured data with complex relationships. NoSQL databases, on the other hand, are non-relational databases that provide flexible schemas and are suitable for handling unstructured or semi-structured data. They offer scalability, high performance, and can handle large volumes of data with ease.
+          </p>
+        </div>
+
+        <div className="blog-item">
+          <h2>Question 3: What is Express.js? What is Nest JS?</h2>
+          <p>
+            Express.js is a minimal and flexible web application framework for Node.js. It provides a robust set of features for building web applications and APIs, such as routing, middleware support, and template engine integration. Nest JS, on the other hand, is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. It combines elements of Object-Oriented Programming, Functional Programming, and Reactive Programming to provide a structured and modular approach to building applications.
+          </p>
+        </div>
+
+        <div className="blog-item">
+          <h2>Question 4: What is MongoDB aggregate and how does it work?</h2>
+          <p>
+            MongoDB's aggregation framework allows for the processing of data records and returns computed results. It provides a way to perform complex data operations, such as grouping, filtering, and transforming data, in a more efficient manner. Aggregation pipelines in MongoDB consist of stages, where each stage performs a specific data transformation. These stages can be used together to achieve powerful data aggregation and analysis. For more details on how MongoDB aggregation works, you can refer to the MongoDB documentation.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
