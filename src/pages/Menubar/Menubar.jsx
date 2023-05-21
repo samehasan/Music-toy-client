@@ -42,9 +42,9 @@ const Menubar = () => {
         <Link className="menu-item" to="/blog">
           <li>Blog</li>
         </Link>
-        <Link className="menu-item" to="/addToy">
+       {user && <Link className="menu-item" to="/addToy">
           <li>Add Toys</li>
-        </Link>
+        </Link>}
 
         {user?.email ? (
           <li className="p-2">

@@ -33,17 +33,22 @@ const router = createBrowserRouter([
         path: "home",
         element: <Home></Home>,
       },
-      {
-        path: "toygalarys",
-        element: <Toygalarys></Toygalarys>,
-      },
+      // {
+      //   path: "toygalarys",
+      //   element: <Toygalarys></Toygalarys>,
+      // },
       {
         path: "/addToy",
         element: <AddToy></AddToy>,
       },
       {
         path: "/MyToys",
-        element: <MyToys></MyToys>,
+        element: (
+          <PrivateRoute>
+            <MyToys></MyToys>
+          </PrivateRoute>
+        ),
+        
       },
       {
         path: "/blog",
@@ -51,10 +56,10 @@ const router = createBrowserRouter([
       },
      
       {
-        path: "toygalarys/:id",
+        path: "toygalarys",
         element: (
           <PrivateRoute>
-            <ToygalaryDetails></ToygalaryDetails>
+            <Toygalarys></Toygalarys>
           </PrivateRoute>
         ),
       },
@@ -69,5 +74,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+  
 
 export default router;
