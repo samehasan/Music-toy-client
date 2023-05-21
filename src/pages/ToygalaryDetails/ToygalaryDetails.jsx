@@ -12,7 +12,7 @@ const ToygalaryDetails = ({ toy }) => {
   <p>Available Quantity :{toy.quantity}</p>
   <p>Description : {toy.description}</p>
   <p>Seller Email:{toy.postedBy}</p></div>
-      {/* Add more details here as needed */}
+      
     </div>
   );
 };
