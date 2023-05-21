@@ -10,15 +10,17 @@ import "./MyToys.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import UpdateToyModal from "../UpdateToyModal/UpdateToyModal";
+import useTitle from "../../hooks/usetitle";
 
 const MyToys = () => {
+ 
   const { user } = useContext(AuthContext);
   const [Toys, setToys] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
   const [control, setControl] = useState(false);
   const [selectedToy, setSelectedToy] = useState(null);
-
+  useTitle('MyToy-MusicToys');
   useEffect(() => {
     fetch(`http://localhost:5000/myToys/${user?.email}`)
       .then((res) => res.json())
@@ -27,7 +29,7 @@ const MyToys = () => {
         setToys(data);
       });
   }, [user, control]);
-
+  
   const handleSearch = () => {
     fetch(`http://localhost:5000/getToysByText/${searchText}`)
       .then((res) => res.json())

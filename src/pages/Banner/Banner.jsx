@@ -8,7 +8,7 @@ function Banner() {
       <div className=" bg-light p-5">
         <div className="row d-flex justify-content-center align-items-center  banner-second-container">
           <div className="col-md-6 col-sm-12 ">
-            <h4>A platform for Buy and Sell Products </h4>
+            <h4>Miniature musical instruments </h4>
             <h1 className="title mt-4">
               Have variours Categories of <br /> Musical Toys
             </h1>

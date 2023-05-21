@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import SocialLoginBtn from "../SocialLoginBtn/SocialLoginBtn";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import useTitle from "../../hooks/usetitle";
 
 // import { useLocation, useHistory, useNavigate } from "react-router";
 
@@ -12,7 +13,7 @@ const Login = () => {
   // const location = useLocation();
   // const history = useHistory();
   // let navigate = useNavigate();
-  
+  useTitle('Login-MusicToys');
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

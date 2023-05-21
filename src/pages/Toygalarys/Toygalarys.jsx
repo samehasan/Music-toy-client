@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ToygalaryDetails from "../ToygalaryDetails/ToygalaryDetails";
 import "../Toygalarys/Toygalarys.css";
+import useTitle from "../../hooks/usetitle";
 
 const Toygalarys = () => {
   const [toys, setToys] = useState([]);
@@ -12,7 +13,7 @@ const Toygalarys = () => {
   useEffect(() => {
     fetchToys();
   }, []);
-
+  useTitle('AllToy-MusicToys');
   const fetchToys = async () => {
     try {
       const response = await fetch("http://localhost:5000/allToys");

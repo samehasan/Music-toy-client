@@ -1,10 +1,11 @@
 import SocialLoginBtn from "./../SocialLoginBtn/SocialLoginBtn";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import useTitle from "../../hooks/usetitle";
 
 const Register = () => {
   const { registerUser } = useContext(AuthContext);
-
+  useTitle('Register-MusicToys');
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");

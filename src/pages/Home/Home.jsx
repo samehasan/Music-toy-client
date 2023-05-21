@@ -4,8 +4,10 @@ import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Toys from "../Toys/Toys";
 import Fivetips from "../fivetips/Fivetips";
+import useTitle from "../../hooks/usetitle";
 
 const Home = () => {
+  useTitle('Home-MusicToys');
   const [servicesData, setServicesData] = useState([]);
 
   return (

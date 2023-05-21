@@ -1,7 +1,9 @@
 import React from 'react';
 import './Blog.css';
+import useTitle from '../../hooks/usetitle';
 
 const Blog = () => {
+  useTitle('Blog-MusicToys');
   return (
     <div className="blog-container">
       <div className="blog-header">
