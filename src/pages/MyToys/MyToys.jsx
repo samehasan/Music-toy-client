@@ -22,7 +22,7 @@ const MyToys = () => {
   const [selectedToy, setSelectedToy] = useState(null);
   useTitle('MyToy-MusicToys');
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys/${user?.email}`)
+    fetch(`https://music-toy-server-samehasan.vercel.app/myToys/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -31,7 +31,7 @@ const MyToys = () => {
   }, [user, control]);
   
   const handleSearch = () => {
-    fetch(`http://localhost:5000/getToysByText/${searchText}`)
+    fetch(`https://music-toy-server-samehasan.vercel.app/getToysByText/${searchText}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -41,7 +41,7 @@ const MyToys = () => {
 
   const handleToyUpdate = (data) => {
     console.log(data);
-    fetch(`http://localhost:5000/updateToy/${data._id}`, {
+    fetch(`https://music-toy-server-samehasan.vercel.app/updateToy/${data._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -56,7 +56,7 @@ const MyToys = () => {
   };
 
   const handleDeleteToy = (toyId) => {
-    fetch(`http://localhost:5000/deleteToy/${toyId}`, {
+    fetch(`https://music-toy-server-samehasan.vercel.app/deleteToy/${toyId}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -18,7 +18,7 @@ const AddToy = () => {
   const onSubmit = (data) => {
     data.skills = selectedOption;
 
-    fetch("http://localhost:5000/post-Toy", {
+    fetch("https://music-toy-server-samehasan.vercel.app/post-Toy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

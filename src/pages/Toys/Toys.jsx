@@ -12,7 +12,7 @@ const Toys = () => {
   const [activeTab, setActiveTab] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allToysByCategory/${activeTab}`)
+    fetch(`https://music-toy-server-samehasan.vercel.app/allToysByCategory/${activeTab}`)
       .then((res) => res.json())
       .then((result) => {
         setToy(result);

@@ -16,7 +16,7 @@ const Toygalarys = () => {
   useTitle('AllToy-MusicToys');
   const fetchToys = async () => {
     try {
-      const response = await fetch("http://localhost:5000/allToys");
+      const response = await fetch("https://music-toy-server-samehasan.vercel.app/allToys");
       const toysData = await response.json();
       setToys(toysData);
       setSearchResults(toysData);
