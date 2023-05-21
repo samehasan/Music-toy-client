@@ -30,7 +30,6 @@ const AddToy = () => {
     console.log(data);
   };
  
-//   console.log(user);
   return (
     <div className="add-Toy-container flex justify-center">
      
