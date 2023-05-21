@@ -58,8 +58,8 @@ const Toy = ({ toy }) => {
         </div>
         <div className="modal-body">
           <img className="w-50" src={image} alt="" />
-          <h2>{title}</h2>
-          <p>{description}</p>
+          <h2>Toy Name :{title}</h2>
+          <p>Description : {description}</p>
           {/* Render additional toy details in the modal */}
           {/* Example: */}
           <p>Price: {price} BDT</p>

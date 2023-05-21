@@ -10,7 +10,7 @@ const ToygalaryDetails = ({ toy }) => {
   <p>seller Name: {toy.seller}</p>
   <p>Price: {toy.price}</p>
   <p>Available Quantity :{toy.quantity}</p>
-  <p>Description{toy.description}</p>
+  <p>Description : {toy.description}</p>
   <p>Seller Email:{toy.postedBy}</p></div>
       {/* Add more details here as needed */}
     </div>

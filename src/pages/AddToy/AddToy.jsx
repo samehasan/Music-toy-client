@@ -74,7 +74,7 @@ const AddToy = () => {
               {...register("image")}
               placeholder="image link"
               type="url"
-              defaultValue="https://easydrawingguides.com/wp-content/uploads/2020/08/how-to-draw-a-piano-featured-image-1200-940x1024.png"
+              defaultValue="https://www.shutterstock.com/image-photo/baby-blue-guitar-on-white-260nw-47290795.jpg"
             />
            
             <input

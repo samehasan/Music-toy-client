@@ -33,7 +33,7 @@ const Menubar = () => {
 
         
         <Link className="menu-item" to="toygalarys">
-          <li>Toy Gallery</li>
+          <li>All Toys</li>
         </Link>
 
         <Link className="menu-item" to="/MyToys">
