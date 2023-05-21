@@ -64,9 +64,9 @@ const Toygalarys = () => {
                 <p className="card-subcategory">{toy.status}</p>
                 <p className="card-price">Price: ${toy.price}</p>
                 <p className="card-quantity">
-                  Available Quantity: {toy.availableQuantity}
+                  Available Quantity: {toy.quantity}
                 </p>
-                <button onClick={() => handleViewDetails(toy)}>
+                <button className="btn btn-success" onClick={() => handleViewDetails(toy)}>
                   View Details
                 </button>
               </div>
@@ -76,8 +76,9 @@ const Toygalarys = () => {
         {showModal && (
           <div className="modal">
             <div className="modal-content">
-              <ToygalaryDetails toy={selectedToy} />
-              <button onClick={closeModal}>Close</button>
+               <ToygalaryDetails toy={selectedToy} /> 
+         
+              <button className="btn btn-danger" onClick={closeModal}>Close</button>
             </div>
           </div>
         )}

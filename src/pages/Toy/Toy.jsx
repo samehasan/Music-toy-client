@@ -7,6 +7,7 @@ const Toy = ({ toy }) => {
   const {
     id,
     title,
+    quantity,
     price,
     description,
     image,
@@ -41,7 +42,7 @@ const Toy = ({ toy }) => {
             <p>rating: {rating}</p>
           </div>
           <div className="text-end">
-            <button onClick={handleModalToggle}>View Details</button>
+            <button className="btn btn-success" onClick={handleModalToggle}>View Details</button>
           </div>
         </div>
       </div>
@@ -51,9 +52,9 @@ const Toy = ({ toy }) => {
     <div className="modal-dialog modal-xl modal-dialog-scrollable">
       <div className="modal-content">
         <div className="modal-header">
-          <button type="button" className="close" onClick={handleModalToggle}>
+          <button type="button" className="btn btn-danger" onClick={handleModalToggle} >
             &times;
-          </button>
+          Close</button>
         </div>
         <div className="modal-body">
           <img className="w-50" src={image} alt="" />
@@ -63,6 +64,7 @@ const Toy = ({ toy }) => {
           {/* Example: */}
           <p>Price: {price} BDT</p>
           <p>Rating: {rating}</p>
+          <p>quantity:{quantity}</p>
           {/* Add more details as needed */}
         </div>
       </div>

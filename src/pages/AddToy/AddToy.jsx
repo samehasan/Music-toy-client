@@ -33,7 +33,8 @@ const AddToy = () => {
   return (
     <div className="add-Toy-container flex justify-center">
      
-        <div className="col-md-8">
+        <div className="col-md-6">
+          <h1 className="text-center">Add your Toy</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             {errors.exampleRequired && <span>This field is required</span>}
             <input
@@ -47,6 +48,12 @@ const AddToy = () => {
               className="text-input"
               {...register("price", { required: true })}
               placeholder="price"
+              
+            />
+            <input
+              className="text-input"
+              {...register("quantity", { required: true })}
+              placeholder="quantity"
               
             />
             <input
@@ -76,7 +83,11 @@ const AddToy = () => {
               placeholder="your email"
               type="email"
             />
-           
+           <input
+              className="text-input"
+              {...register("seller")}
+              placeholder="Seller Name"
+            />
             <input
               className="text-input"
               {...register("description")}

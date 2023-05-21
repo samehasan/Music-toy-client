@@ -90,7 +90,7 @@ const MyToys = () => {
               <th>Name</th>
               {/* <th>Seller</th> */}
               <th>Description</th>
-              <th>Rating</th>
+              <th>Quantity</th>
               <th>Price</th>
               <th>Edit</th>
               <th>Action</th>
@@ -103,7 +103,7 @@ const MyToys = () => {
                 <td>{Toy.title}</td>
                 {/* <td>{Toy.seller}</td> */}
                 <td>{Toy.description}</td>
-                <td>{Toy.rating}</td>
+                <td>{Toy.quantity}</td>
                 <td>{Toy.price}</td>
                 <td>
                   <Button variant="primary" onClick={() => setModalShow(true)}>
@@ -117,7 +117,7 @@ const MyToys = () => {
                   />
                 </td>
                 <td>
-                  <button onClick={() => handleDeleteToy(Toy._id)}>
+                  <button className="btn btn-danger" onClick={() => handleDeleteToy(Toy._id)}>
                     Delete
                   </button>
                 </td>

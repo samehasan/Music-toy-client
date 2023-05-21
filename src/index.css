@@ -1,7 +1,9 @@
 body{
     background-color: rgb(219, 225, 230) !important;
 }
-
+p{
+    font-weight: bolder;
+}
 /* echo "# b7a11-toy-marketplace-client-side-samehasan" >> README.md
 git init
 git add README.md

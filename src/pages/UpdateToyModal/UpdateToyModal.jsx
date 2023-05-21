@@ -37,18 +37,18 @@ const UpdateToyModal = (props) => {
           onSubmit={handleSubmit(handleToyUpdate)}
         >
           {errors.exampleRequired && <span>This field is required</span>}
-          <input
-            className="text-input"
-            {...register("title")}
-            placeholder="Name"
-         
-          />
+          
           <input
             className="text-input d-none"
-            {...register("_id")}
+            {...register("_id", { required: true })}
             value={props?.Toy?._id}
           />
-
+<input
+            className="text-input"
+            {...register("title", { required: true })}
+            placeholder="title"
+           
+          />
           <input
             className="text-input"
             {...register("price", { required: true })}
@@ -57,30 +57,17 @@ const UpdateToyModal = (props) => {
           />
            <input
               className="text-input"
-              {...register("description")}
+              {...register("description", { required: true })}
               placeholder="description"
             
             />
              <input
               className="text-input"
-              {...register("Available")}
+              {...register("quantity", { required: true })}
               placeholder="available product"
             />
-          <input
-            className="text-input"
-            {...register("rating", { required: true })}
-            placeholder="rating"
          
-          />
-        
-      
-          <input
-            className="text-input"
-            {...register("image")}
-            placeholder="image link"
-            type="url"
          
-          />
           
           <input className="submit-btn" value="Update Toy" type="submit" />
         </form>

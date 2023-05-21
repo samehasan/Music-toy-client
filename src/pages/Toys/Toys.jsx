@@ -24,21 +24,21 @@ const Toys = () => {
   };
   return (
     <div>
-      <h1 className="text-center fw-bold mt-5 p-5">Shop By Category</h1>
+      <h1 className="text-center fw-bold mt-5 p-5">Click & Choose from Category below</h1>
       <div className="tab-container text-center">
         <div className="text-center w-100 m-auto">
-          <div className="tabs d-flex justify-content-center align-items-center">
+          <div className="tabs d-flex justify-content-center align-items-center ">
             <div
               onClick={() => handleTabClick("Piano")}
-              className={`tab  tab2 Piano ${
-                activeTab == "Piano" ? " bg-warning text-dark" : ""
+              className={`border border-dark tab  tab2 Piano ${
+                activeTab == "Piano" ? " bg-warning  text-dark" : ""
               }`}
             >
                <h2>Piano</h2>
             </div>
             <div
               onClick={() => handleTabClick("Guitar")}
-              className={`tab  tab2 Guitar ${
+              className={`border border-dark tab  tab2 Guitar ${
                 activeTab == "Guitar" ? " bg-success text-white" : ""
               }`}
             >
@@ -46,7 +46,7 @@ const Toys = () => {
             </div>
             <div
               onClick={() => handleTabClick("Drums")}
-              className={`tab  tab2 Drums ${
+              className={`border border-dark tab  tab2 Drums ${
                 activeTab == "Drums" ? " bg-primary text-white" : ""
               }`}
             >
