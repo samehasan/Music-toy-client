@@ -8,6 +8,6 @@ This is a Toy Website.Where you can get many Toy.Go check the site .
 * By Clicking View details you can see exact details of that Toy.
 
 
-* Bootsrap used here
-* Assignment 11
+* Bootsrap used 
+* Assignment11
 
